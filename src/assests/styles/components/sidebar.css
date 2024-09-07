@@ -1,0 +1,73 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sidebar-username {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.sidebar-link {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.sidebar-link.active {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
+.sidebar-link:hover {
+  background-color: #e0e0e0;
+}
+
+.sidebar-signout {
+  padding: 10px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 100px;
+}
+
+.sidebar-signout:hover {
+  background-color: #e03a3a;
+}
