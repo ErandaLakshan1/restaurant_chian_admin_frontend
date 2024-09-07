@@ -1,0 +1,21 @@
+.loaderDiv {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.943);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 14;
+  transition: visibility 0s opacity 0.5s;
+}
+
+.loader {
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+}
