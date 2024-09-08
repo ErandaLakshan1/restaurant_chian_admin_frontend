@@ -3,6 +3,7 @@ import "../assests/styles/components/sidebar.css";
 import logoImg from "../assests/images/logo.png";
 import { isAuthenticated } from "../utils/authUtils";
 import { useNavigate, NavLink } from "react-router-dom";
+import { userData } from "../utils/authUtils";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -25,15 +26,18 @@ const Sidebar = () => {
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/profile"
-              className="sidebar-link"
-              activeClassName="active"
-            >
-              Profile
-            </NavLink>
-          </li>
+
+          {userData().role === "admin" ? (
+            <li>
+              <NavLink
+                to="/branch"
+                className="sidebar-link"
+                activeClassName="active"
+              >
+                Branch
+              </NavLink>
+            </li>
+          ) : null}
           <li>
             <NavLink
               to="/messages"

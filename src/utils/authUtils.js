@@ -1,3 +1,5 @@
+import { jwtDecode } from "jwt-decode";
+
 export const getAccessToken = () => {
   return localStorage.getItem("accessToken");
 };
@@ -25,3 +27,15 @@ export const removeRefreshToken = () => {
 export const isAuthenticated = () => {
   return !!getAccessToken();
 };
+
+export const userData = () => {
+  const decodedData = jwtDecode(getAccessToken());
+  const data = {
+    role: decodedData.user_type,
+    userId: decodedData.user_id,
+    username: decodedData.username,
+  };
+
+  return data;
+};
+

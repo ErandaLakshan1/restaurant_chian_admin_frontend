@@ -1,0 +1,116 @@
+.branch-details-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.branch-details-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.branch-details-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.branch-details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.branch-details-label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.branch-details-label:last-child {
+  margin-right: 0;
+}
+
+.branch-details-input,
+.branch-details-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.branch-details-textarea {
+  resize: vertical;
+}
+
+.branch-details-file-input {
+  margin-top: 5px;
+}
+
+.branch-details-image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.branch-details-image-container {
+  position: relative;
+}
+
+.branch-details-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.branch-details-delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+.branch-details-update-button,
+.branch-details-add-images-button,
+.branch-details-delete-branch-button {
+  padding: 10px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.branch-details-update-button:hover,
+.branch-details-add-images-button:hover,
+.branch-details-delete-branch-button:hover {
+  background-color: #e07b00;
+}
+
+.branch-details-delete-branch-button {
+  background-color: red;
+}
+
+.branch-details-delete-branch-button:hover {
+  background-color: darkred;
+}

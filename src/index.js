@@ -5,6 +5,9 @@ import "./assests/styles/index.css";
 
 import Login from "./pages/auth/Login";
 import Home from "./pages/Home";
+import Branch from "./pages/branch/Branch";
+import AddBranch from "./pages/branch/AddBranch";
+import BranchDetails from "./pages/branch/BranchDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +16,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/sign-in" element={<Login />} />
+        <Route path="/branch" element={<Branch />} />
+        <Route path="/add-branch" element={<AddBranch />} />
+        <Route path="/branch-details" element={<BranchDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>
