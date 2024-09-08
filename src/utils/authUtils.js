@@ -29,13 +29,15 @@ export const isAuthenticated = () => {
 };
 
 export const userData = () => {
-  const decodedData = jwtDecode(getAccessToken());
-  const data = {
-    role: decodedData.user_type,
-    userId: decodedData.user_id,
-    username: decodedData.username,
-  };
+  if (isAuthenticated()) {
+    const decodedData = jwtDecode(getAccessToken());
+    const data = {
+      role: decodedData.user_type,
+      userId: decodedData.user_id,
+      username: decodedData.username,
+      branch: decodedData.branch || null,
+    };
 
-  return data;
+    return data;
+  }
 };
-

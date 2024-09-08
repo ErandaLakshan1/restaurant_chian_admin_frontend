@@ -98,9 +98,9 @@ const BranchDetails = () => {
       const response = await addImages(formData, id);
       console.log(response);
       if (response.success) {
-        fetchBranchDetails();
         setImages((prevImages) => [...prevImages, ...newImages]);
         setNewImages([]);
+        fetchBranchDetails();
         popAlert("Success", "Images added successfully.", "success");
       } else {
         popAlert("Error", "Failed to add images.", "error");
@@ -249,12 +249,14 @@ const BranchDetails = () => {
               </label>
             </div>
 
-            <button
-              onClick={handleUpdateDetails}
-              className="branch-details-update-button"
-            >
-              Save Changes
-            </button>
+            {userData().role === "admin" && (
+              <button
+                onClick={handleUpdateDetails}
+                className="branch-details-update-button"
+              >
+                Save Changes
+              </button>
+            )}
 
             <div className="branch-details-images">
               <h2>Current Images</h2>
@@ -312,12 +314,14 @@ const BranchDetails = () => {
               </button>
             </div>
 
-            <button
-              onClick={handleDeleteBranch}
-              className="branch-details-delete-branch-button"
-            >
-              Delete Branch
-            </button>
+            {userData().role === "admin" && (
+              <button
+                onClick={handleDeleteBranch}
+                className="branch-details-delete-branch-button"
+              >
+                Delete Branch
+              </button>
+            )}
           </div>
         </div>
       </div>

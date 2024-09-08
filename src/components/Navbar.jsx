@@ -1,17 +1,25 @@
 import React, { useState } from "react";
 import "../assests/styles/components/navbar.css";
 import avatarImg from "../assests/images/avatar.png";
+import { removeAccessToken, removeRefreshToken } from "../utils/authUtils";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const handleSignOut = () => {
+    removeAccessToken();
+    removeRefreshToken();
+    navigate("/sign-in");
+  };
+
   return (
     <>
-
       <div className="navbar">
         <div className="navbar-content">
           <div className="navbar-avatar" onClick={toggleDropdown}>
@@ -22,7 +30,10 @@ const Navbar = () => {
               <a href="#profile" className="navbar-dropdown-link">
                 Profile
               </a>
-              <a href="#signout" className="navbar-dropdown-link">
+              <a
+                className="navbar-dropdown-link"
+                onClick={() => handleSignOut()}
+              >
                 Sign Out
               </a>
             </div>

@@ -37,6 +37,16 @@ const Sidebar = () => {
                 Branch
               </NavLink>
             </li>
+          ) : userData().role === "manager" ? (
+            <li>
+              <NavLink
+                to={`/branch-details?id=${userData().branch}`}
+                className="sidebar-link"
+                activeClassName="active"
+              >
+                Branch
+              </NavLink>
+            </li>
           ) : null}
           <li>
             <NavLink
