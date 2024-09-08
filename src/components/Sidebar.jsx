@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import "../assests/styles/components/sidebar.css";
 import logoImg from "../assests/images/logo.png";
 import { isAuthenticated } from "../utils/authUtils";
@@ -27,7 +27,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
 
-          {userData().role === "admin" ? (
+          {userData() && userData().role === "admin" ? (
             <li>
               <NavLink
                 to="/branch"
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 Branch
               </NavLink>
             </li>
-          ) : userData().role === "manager" ? (
+          ) : userData() && userData().role === "manager" ? (
             <li>
               <NavLink
                 to={`/branch-details?id=${userData().branch}`}
@@ -50,11 +50,11 @@ const Sidebar = () => {
           ) : null}
           <li>
             <NavLink
-              to="/messages"
+              to="/menu"
               className="sidebar-link"
               activeClassName="active"
             >
-              Messages
+              Menu
             </NavLink>
           </li>
           <li>

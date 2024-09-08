@@ -1,0 +1,98 @@
+.menu-page {
+  padding: 20px;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.menu-header h1 {
+  margin: 0;
+}
+
+.add-menu-button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-menu-button:hover {
+  background-color: #e07b00;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+}
+
+.menu-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.menu-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.menu-name {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-category,
+.menu-price,
+.menu-availability {
+  font-size: 16px;
+  margin: 0;
+}
+
+.menu-category {
+  color: #555;
+}
+
+.menu-price {
+  color: #ff8c00; /* Highlight price */
+  font-weight: bold;
+}
+
+.menu-availability-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: default;
+}
+
+.available {
+  background-color: #28a745; 
+}
+
+.unavailable {
+  background-color: #6c757d; 
+}

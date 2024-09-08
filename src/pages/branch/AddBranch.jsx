@@ -20,7 +20,7 @@ const AddBranch = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    if (!userData().role === "admin") {
+    if (userData().role === "manager" || userData().role === "staff") {
       popAlert("Oops...", "You don't have permisson for this", "error");
       navigate("/");
     }
@@ -51,20 +51,23 @@ const AddBranch = () => {
       const response = await createBranch(formData);
       if (!response.success) {
         const errorMessages = {};
-       
-        popAlert("Oops...", "An unexpected error occurred. Please try again.", "error");
+
+        popAlert(
+          "Oops...",
+          "An unexpected error occurred. Please try again.",
+          "error"
+        );
       } else {
         // Reset the form
-        setBranchName('');
-        setAddress('');
-        setContactNumber('');
-        setLongitude('');
-        setLatitude('');
-        setDescription('');
+        setBranchName("");
+        setAddress("");
+        setContactNumber("");
+        setLongitude("");
+        setLatitude("");
+        setDescription("");
         setImages([]);
         popAlert("Success!", "Branch added successfully.", "success");
       }
-      
     } catch (error) {
       console.log(error);
       popAlert(

@@ -1,0 +1,102 @@
+.add-menu-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.add-menu-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.add-menu-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.add-menu-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.add-menu-label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.add-menu-label:last-child {
+  margin-right: 0;
+}
+
+.add-menu-input,
+.add-menu-textarea,
+.add-menu-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.add-menu-textarea {
+  resize: vertical;
+}
+
+.add-menu-file-input {
+  margin-top: 5px;
+}
+
+.add-menu-image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.add-menu-preview-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.add-menu-submit-button {
+  padding: 10px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-menu-submit-button:hover {
+  background-color: #e07b00;
+}
+
+.availability-label {
+  display: flex;
+  align-items: left;
+}
+
+.availability-checkbox {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.availability-checkbox input {
+  margin-right: 5px;
+}
+
+.availability-text {
+  margin-left: 5px;
+}

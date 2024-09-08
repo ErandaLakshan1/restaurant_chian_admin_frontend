@@ -134,8 +134,8 @@ const BranchDetails = () => {
   };
 
   const handleDeleteBranch = async () => {
-    setLoading(true);
     if (window.confirm("Are you sure you want to delete this branch?")) {
+      setLoading(true);
       try {
         const response = await deleteBranch(id);
         if (response.success) {

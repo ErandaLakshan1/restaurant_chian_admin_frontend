@@ -1,0 +1,125 @@
+.menu-item-details-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.menu-item-details-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.menu-item-details-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.menu-item-details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.menu-item-details-label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.menu-item-details-label:last-child {
+  margin-right: 0;
+}
+
+.menu-item-details-input,
+.menu-item-details-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.menu-item-details-textarea {
+  resize: vertical;
+}
+
+.menu-item-details-file-input {
+  margin-top: 5px;
+}
+
+.menu-item-details-image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.menu-item-details-image-container {
+  position: relative;
+}
+
+.menu-item-details-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.menu-item-details-delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(255, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  justify-content: center;
+}
+
+.menu-item-details-update-button,
+.menu-item-details-add-images-button,
+.menu-item-details-delete-,
+.menu-item-details-delete-item-button {
+  padding: 10px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.menu-item-details-update-button:hover,
+.menu-item-details-add-images-button:hover,
+.menu-item-details-delete-button:hover {
+  background-color: #e07b00;
+}
+
+.menu-item-details-delete-item-button {
+  background-color: red;
+}
+
+.menu-item-details-delete-item-button:hover {
+  background-color: darkred;
+}
+
+.availability-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.availability-text {
+  margin-left: 10px;
+}
