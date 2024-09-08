@@ -1,0 +1,46 @@
+.home {
+  padding: 20px;
+}
+
+.home-welcome {
+  margin-bottom: 20px;
+}
+
+.home-welcome h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.home-welcome p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.home-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.overview-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.overview-card h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.overview-card p {
+  font-size: 2rem;
+  color: #f0a500;
+  margin: 10px 0 0;
+}

@@ -5,6 +5,7 @@ import { popAlert } from "../../utils/alerts";
 import logInImg from "../../assests/images/login.svg";
 import { loginUser } from "../../service/auth.service";
 import { setAccessToken, setRefreshToken } from "../../utils/authUtils";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [data, setData] = useState({
@@ -21,6 +22,7 @@ const Login = () => {
       [name]: value,
     });
   };
+  const navigate = useNavigate();
 
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +49,7 @@ const Login = () => {
 
           setAccessToken(response.data.access);
           setRefreshToken(response.data.refresh);
-          //   navigate("/");
+          navigate("/");
         }
       } catch (error) {
         popAlert(

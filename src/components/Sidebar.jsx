@@ -1,38 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../assests/styles/components/sidebar.css";
-import avtarImg from "../assests/images/avatar.png";
+import logoImg from "../assests/images/logo.png";
+import { isAuthenticated } from "../utils/authUtils";
+import { useNavigate, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!isAuthenticated()) {
+      navigate("/sign-in");
+    }
+  }, [navigate]);
+
   return (
     <>
       <div className="sidebar">
         <div className="sidebar-header">
-          <img src={avtarImg} alt="Avatar" className="sidebar-avatar" />
-          <h2 className="sidebar-username">John Doe</h2>
+          <img src={logoImg} alt="Company Logo" className="sidebar-logo" />
         </div>
         <ul className="sidebar-links">
           <li>
-            <a href="#home" className="sidebar-link">
+            <NavLink to="/" className="sidebar-link" activeClassName="active">
               Home
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#profile" className="sidebar-link">
+            <NavLink
+              to="/profile"
+              className="sidebar-link"
+              activeClassName="active"
+            >
               Profile
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#messages" className="sidebar-link">
+            <NavLink
+              to="/messages"
+              className="sidebar-link"
+              activeClassName="active"
+            >
               Messages
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#settings" className="sidebar-link">
+            <NavLink
+              to="/settings"
+              className="sidebar-link"
+              activeClassName="active"
+            >
               Settings
-            </a>
+            </NavLink>
           </li>
         </ul>
-        <button className="sidebar-signout">Sign Out</button>
       </div>
     </>
   );
