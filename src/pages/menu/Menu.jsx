@@ -48,15 +48,14 @@ const Menu = () => {
         <div className="menu-page">
           <div className="menu-header">
             <h1>All Menu Items</h1>
-            {userData().role === "admin" ||
-              (userData().role === "manager" && (
+            {(userData().role === "admin" || userData().role === "manager") && (
                 <button
                   className="add-menu-button"
                   onClick={() => navigate("/add-menu")}
                 >
                   Add New Menu Item
                 </button>
-              ))}
+              )}
           </div>
           {menus.length === 0 && <div>No menu items available.....</div>}
           <div className="menu-list">

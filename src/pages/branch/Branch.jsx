@@ -36,7 +36,7 @@ const Branch = () => {
   }, []);
 
   useEffect(() => {
-    if (!userData().role === "admin") {
+    if (userData().role === "manager" || userData().role === "staff") {
       popAlert("Oops...", "You don't have permisson for this", "error");
       navigate("/");
     }
