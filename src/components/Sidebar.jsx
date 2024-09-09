@@ -99,6 +99,18 @@ const Sidebar = () => {
               Ordres
             </NavLink>
           </li>
+
+          {(userData().role === "admin" || userData().role === "manager") && (
+            <li>
+              <NavLink
+                to="/staff"
+                className="sidebar-link"
+                activeClassName="active"
+              >
+                Staff
+              </NavLink>
+            </li>
+          )}
         </ul>
       </div>
     </>

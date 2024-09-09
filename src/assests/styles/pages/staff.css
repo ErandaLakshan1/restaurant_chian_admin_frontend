@@ -1,0 +1,81 @@
+.staff-page {
+  padding: 20px;
+}
+
+.staff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.staff-header h1 {
+  margin: 0;
+}
+
+.add-staff-button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-staff-button:hover {
+  background-color: #e07b00;
+}
+
+.branch-selection {
+  margin-bottom: 20px;
+}
+
+.branch-selection select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.staff-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.staff-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.staff-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.staff-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.staff-email,
+.staff-role,
+.staff-username,
+.staff-address,
+.staff-nic,
+.staff-mobile {
+  font-size: 16px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.no-staff-message {
+  color: #ff0000;
+  font-size: 16px;
+  margin: 20px 0;
+}

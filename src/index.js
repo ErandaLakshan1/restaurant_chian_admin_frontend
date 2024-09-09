@@ -19,6 +19,8 @@ import Coupons from "./pages/order/Coupons";
 import AddCoupon from "./pages/order/AddCoupon";
 import CouponDetails from "./pages/order/CouponDetails";
 import Orders from "./pages/order/Orders";
+import Staff from "./pages/Staff";
+import AddStaff from "./pages/AddStaff";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -41,6 +43,8 @@ root.render(
         <Route path="/add-coupon" element={<AddCoupon />} />
         <Route path="/coupon-details" element={<CouponDetails />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/staff" element={<Staff />} />
+        <Route path="/add-staff" element={<AddStaff />} />
       </Routes>
     </Router>
   </React.StrictMode>

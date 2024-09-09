@@ -1,4 +1,3 @@
-// src/pages/Table.js
 import React, { useState, useEffect } from "react";
 import "../../assests/styles/pages/reservation/tables.css";
 import Sidebar from "../../components/Sidebar";
@@ -13,7 +12,6 @@ import { getTablesAccordingToBranch } from "../../service/reservation.service";
 const Table = () => {
   const [loading, setLoading] = useState(false);
   const [tables, setTables] = useState([]);
-  const [branches, setBranches] = useState([]);
   const [branchId, setBranchId] = useState(null);
   const [branchOptions, setBranchOptions] = useState([]);
   const navigate = useNavigate();
