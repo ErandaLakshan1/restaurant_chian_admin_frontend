@@ -1,25 +1,19 @@
-.body {
-  display: flex;
-  flex-direction: column;
-  margin-left: 300px; 
-}
-
-.branch-page {
+.coupons-page {
   padding: 20px;
 }
 
-.branch-header {
+.coupons-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.branch-header h1 {
+.coupons-header h1 {
   margin: 0;
 }
 
-.add-branch-button {
+.add-coupon-button {
   padding: 10px 20px;
   background-color: #ff8c00;
   color: white;
@@ -29,53 +23,38 @@
   font-size: 16px;
 }
 
-.add-branch-button:hover {
+.add-coupon-button:hover {
   background-color: #e07b00;
 }
 
-.branch-list {
+.coupon-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
   cursor: pointer;
 }
 
-.branch-item {
+.coupon-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
 
-.branch-image {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-right: 20px;
-}
-
-.branch-details {
+.coupon-details {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  flex: 1;
-}
-
-.branch-name,
-.branch-address,
-.branch-contact {
-  margin: 0;
   font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.branch-name {
+.coupon-details div {
+  margin-bottom: 5px;
+}
+
+.coupon-details strong {
   font-weight: bold;
-}
-
-.branch-address,
-.branch-contact {
-  color: #555;
 }

@@ -1,0 +1,69 @@
+.coupon-details-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.coupon-details-title {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.coupon-details-form {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+}
+
+.coupon-details-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.coupon-details-label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.coupon-details-label:last-child {
+  margin-right: 0;
+}
+
+.coupon-details-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.coupon-details-update-button,
+.coupon-details-delete-button {
+  padding: 10px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.coupon-details-update-button:hover,
+.coupon-details-delete-button:hover {
+  background-color: #e07b00;
+}
+
+.coupon-details-delete-button {
+  background-color: red;
+}
+
+.coupon-details-delete-button:hover {
+  background-color: darkred;
+}

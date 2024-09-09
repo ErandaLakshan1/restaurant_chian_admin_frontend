@@ -79,6 +79,16 @@ const Sidebar = () => {
               Reservations
             </NavLink>
           </li>
+
+          <li>
+            <NavLink
+              to="/coupons"
+              className="sidebar-link"
+              activeClassName="active"
+            >
+             Coupons
+            </NavLink>
+          </li>
         </ul>
       </div>
     </>

@@ -15,6 +15,9 @@ import Table from "./pages/reservation/Table";
 import AddTable from "./pages/reservation/AddTable";
 import TableDetails from "./pages/reservation/TableDetails";
 import TableReservation from "./pages/reservation/TableReservation";
+import Coupons from "./pages/order/Coupons";
+import AddCoupon from "./pages/order/AddCoupon";
+import CouponDetails from "./pages/order/CouponDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -33,6 +36,9 @@ root.render(
         <Route path="/add-table" element={<AddTable />} />
         <Route path="/table-details" element={<TableDetails />} />
         <Route path="/table-reservations" element={<TableReservation />} />
+        <Route path="/coupons" element={<Coupons />} />
+        <Route path="/add-coupon" element={<AddCoupon />} />
+        <Route path="/coupon-details" element={<CouponDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>
