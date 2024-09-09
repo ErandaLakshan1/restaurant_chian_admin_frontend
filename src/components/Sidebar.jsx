@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import "../assests/styles/components/sidebar.css";
 import logoImg from "../assests/images/logo.png";
 import { isAuthenticated } from "../utils/authUtils";
@@ -57,15 +57,18 @@ const Sidebar = () => {
               Menu
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/settings"
-              className="sidebar-link"
-              activeClassName="active"
-            >
-              Settings
-            </NavLink>
-          </li>
+
+          {(userData().role === "manager" || userData().role === "admin") && (
+            <li>
+              <NavLink
+                to="/tables"
+                className="sidebar-link"
+                activeClassName="active"
+              >
+                Tables
+              </NavLink>
+            </li>
+          )}
         </ul>
       </div>
     </>

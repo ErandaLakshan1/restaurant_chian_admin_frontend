@@ -1,0 +1,71 @@
+.table-page {
+  padding: 20px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h1 {
+  margin: 0;
+}
+
+.add-table-button {
+  padding: 10px 20px;
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-table-button:hover {
+  background-color: #e07b00;
+}
+
+.branch-selection {
+  margin-bottom: 20px;
+}
+
+.branch-selection select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.table-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.table-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  background-color: #fff;
+}
+
+.table-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-number {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.table-capacity,
+.table-description {
+  color: #555;
+  font-size: 16px;
+}

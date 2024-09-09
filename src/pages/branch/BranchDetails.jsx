@@ -173,7 +173,7 @@ const BranchDetails = () => {
 
   return (
     <>
-      {loading && <Loader />}
+      {loading ? Loader(loading) : null}
       <Sidebar />
       <Navbar />
 

@@ -11,6 +11,10 @@ import BranchDetails from "./pages/branch/BranchDetails";
 import Menu from "./pages/menu/Menu";
 import AddMenu from "./pages/menu/AddMenu";
 import MenuDetails from "./pages/menu/MenuDetails";
+import Table from "./pages/reservation/Table";
+import AddTable from "./pages/reservation/AddTable";
+import TableDetails from "./pages/reservation/TableDetails";
+import TableReservation from "./pages/reservation/TableReservation";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +29,9 @@ root.render(
         <Route path="/menu" element={<Menu />} />
         <Route path="/add-menu" element={<AddMenu />} />
         <Route path="/menu-details" element={<MenuDetails />} />
+        <Route path="/tables" element={<Table />} />
+        <Route path="/add-table" element={<AddTable />} />
+        <Route path="/table-details" element={<TableDetails />} />
       </Routes>
     </Router>
   </React.StrictMode>
