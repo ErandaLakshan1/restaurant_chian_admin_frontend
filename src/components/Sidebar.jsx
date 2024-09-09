@@ -86,7 +86,17 @@ const Sidebar = () => {
               className="sidebar-link"
               activeClassName="active"
             >
-             Coupons
+              Coupons
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink
+              to="/orders"
+              className="sidebar-link"
+              activeClassName="active"
+            >
+              Ordres
             </NavLink>
           </li>
         </ul>

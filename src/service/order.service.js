@@ -58,7 +58,8 @@ export const getCouponDetails = async (couponId) => {
 export const editCoupon = async (couponId, data) => {
   try {
     const response = await getApI().patch(
-      `api/orders/update/coupon/${couponId}/`, data
+      `api/orders/update/coupon/${couponId}/`,
+      data
     );
     return { success: true, data: response.data };
   } catch (error) {
@@ -79,6 +80,26 @@ export const deleteCoupon = async (couponId) => {
   try {
     const response = await getApI().delete(
       `api/orders/delete/coupon/${couponId}/`
+    );
+    return { success: true, data: response.data };
+  } catch (error) {
+    if (error.response && error.response.data) {
+      return { success: false, errors: error.response.data };
+    } else {
+      console.error("An unexpected error occurred:", error);
+      return {
+        success: false,
+        errors: { general: "An unexpected error occurred. Please try again." },
+      };
+    }
+  }
+};
+
+// to get orders according to branch
+export const getOrdersAccordingToBranch = async (branchId) => {
+  try {
+    const response = await getApI().get(
+      `api/orders/get/ordres_by_admin_according_branches/${branchId}/`
     );
     return { success: true, data: response.data };
   } catch (error) {
