@@ -1,0 +1,45 @@
+.reservations-page {
+  padding: 20px;
+}
+
+.reservations-page h1 {
+  margin: 0;
+}
+
+.branch-reservations {
+  margin-bottom: 20px;
+}
+
+.branch-reservations h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reservation-item {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.reservation-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+.reservation-details div {
+  margin-bottom: 5px;
+}
+
+.reservation-details strong {
+  font-weight: bold;
+}

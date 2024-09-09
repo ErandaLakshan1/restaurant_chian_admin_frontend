@@ -32,6 +32,7 @@ root.render(
         <Route path="/tables" element={<Table />} />
         <Route path="/add-table" element={<AddTable />} />
         <Route path="/table-details" element={<TableDetails />} />
+        <Route path="/table-reservations" element={<TableReservation />} />
       </Routes>
     </Router>
   </React.StrictMode>

@@ -69,6 +69,16 @@ const Sidebar = () => {
               </NavLink>
             </li>
           )}
+
+          <li>
+            <NavLink
+              to="/table-reservations"
+              className="sidebar-link"
+              activeClassName="active"
+            >
+              Reservations
+            </NavLink>
+          </li>
         </ul>
       </div>
     </>
