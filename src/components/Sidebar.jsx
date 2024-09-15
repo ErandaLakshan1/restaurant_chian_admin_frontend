@@ -7,6 +7,7 @@ import { userData } from "../utils/authUtils";
 
 const Sidebar = () => {
   const navigate = useNavigate();
+  const user = userData(); 
 
   useEffect(() => {
     if (!isAuthenticated()) {
@@ -27,7 +28,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
 
-          {userData() && userData().role === "admin" ? (
+          {user && user.role === "admin" ? (
             <li>
               <NavLink
                 to="/branch"
@@ -37,10 +38,10 @@ const Sidebar = () => {
                 Branch
               </NavLink>
             </li>
-          ) : userData() && userData().role === "manager" ? (
+          ) : user && user.role === "manager" ? (
             <li>
               <NavLink
-                to={`/branch-details?id=${userData().branch}`}
+                to={`/branch-details?id=${user.branch}`}
                 className="sidebar-link"
                 activeClassName="active"
               >
@@ -58,7 +59,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
 
-          {(userData().role === "manager" || userData().role === "admin") && (
+          {user && (user.role === "manager" || user.role === "admin") && (
             <li>
               <NavLink
                 to="/tables"
@@ -96,11 +97,11 @@ const Sidebar = () => {
               className="sidebar-link"
               activeClassName="active"
             >
-              Ordres
+              Orders
             </NavLink>
           </li>
 
-          {(userData().role === "admin" || userData().role === "manager") && (
+          {user && (user.role === "admin" || user.role === "manager") && (
             <li>
               <NavLink
                 to="/staff"
@@ -116,5 +117,4 @@ const Sidebar = () => {
     </>
   );
 };
-
 export default Sidebar;

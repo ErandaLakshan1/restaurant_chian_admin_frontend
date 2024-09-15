@@ -151,22 +151,25 @@ const AddMenu = () => {
                   required
                 />
               </label>
-              <label className="add-menu-label">
-                Branch
-                <select
-                  className="add-menu-select"
-                  value={branch}
-                  onChange={(e) => setBranch(e.target.value)}
-                  required
-                >
-                  <option value="">Select a branch</option>
-                  {branches.map((branch) => (
-                    <option key={branch.id} value={branch.id}>
-                      {branch.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
+
+              {userData().role === "admin" && (
+                <label className="add-menu-label">
+                  Branch
+                  <select
+                    className="add-menu-select"
+                    value={branch}
+                    onChange={(e) => setBranch(e.target.value)}
+                    required
+                  >
+                    <option value="">Select a branch</option>
+                    {branches.map((branch) => (
+                      <option key={branch.id} value={branch.id}>
+                        {branch.name}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
             </div>
 
             <div className="add-menu-row">
